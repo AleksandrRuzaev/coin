@@ -1,6 +1,6 @@
 import { routesStrings } from './strings';
 
-type NavigationLink = {
+export type NavigationLink = {
     route: string;
     label: string;
     links?: NavigationLink[];
@@ -10,7 +10,7 @@ type NavigationLink = {
 const routes: NavigationLink[] = [
     {
         route: '/',
-        label: routesStrings.main,
+        label: routesStrings.home,
     },
     {
         route: '/statistics',

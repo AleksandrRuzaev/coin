@@ -1,5 +1,5 @@
 const routesStrings = {
-    main: 'Main',
+    home: 'Home',
     statistics: 'Statistics',
     currency: 'Currency',
     settings: 'Settings',
