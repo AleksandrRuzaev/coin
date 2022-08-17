@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { NavigationLink } from '../../../utils/routes';
 
 type NavigationProps = {
-    links: any[];
+    links: NavigationLink[];
     type?: unknown;
     className?: string;
 };
@@ -13,8 +14,14 @@ const Navigation: React.FC<NavigationProps> = ({
 }): JSX.Element => {
     return (
         <nav className={className}>
-            {links.map((link) => (
-                <Link to={link.route}>{link.label}</Link>
+            {links.map(({ route, label }, index) => (
+                <Link
+                    to={route}
+                    className="navigation__link"
+                    key={`${label}_${index}`}
+                >
+                    {label}
+                </Link>
             ))}
         </nav>
     );
