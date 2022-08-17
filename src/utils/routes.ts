@@ -7,23 +7,38 @@ export type NavigationLink = {
     disabled?: boolean;
 };
 
+const pages = {
+    home: {
+        value: '/',
+    },
+    statistics: {
+        value: '/statistics',
+    },
+    currency: {
+        value: '/currency',
+    },
+    settings: {
+        value: '/settings',
+    },
+};
+
 const routes: NavigationLink[] = [
     {
-        route: '/',
+        route: pages.home.value,
         label: routesStrings.home,
     },
     {
-        route: '/statistics',
+        route: pages.statistics.value,
         label: routesStrings.statistics,
     },
     {
-        route: '/currency',
+        route: pages.currency.value,
         label: routesStrings.currency,
     },
     {
-        route: '/settings',
+        route: pages.settings.value,
         label: routesStrings.settings,
     },
 ];
 
-export { routes };
+export { routes, pages };
