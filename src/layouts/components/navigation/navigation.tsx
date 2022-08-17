@@ -1,6 +1,8 @@
+import classNames from 'classnames';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { NavigationLink } from '../../../utils/routes';
+import './navigation.scss';
 
 type NavigationProps = {
     links: NavigationLink[];
@@ -13,15 +15,15 @@ const Navigation: React.FC<NavigationProps> = ({
     className,
 }): JSX.Element => {
     return (
-        <nav className={className}>
+        <nav className={classNames(className, 'navigation')}>
             {links.map(({ route, label }, index) => (
-                <Link
+                <NavLink
                     to={route}
                     className="navigation__link"
                     key={`${label}_${index}`}
                 >
                     {label}
-                </Link>
+                </NavLink>
             ))}
         </nav>
     );

@@ -1,0 +1,30 @@
+@use '../../../variables' as v;
+
+.navigation {
+    display: flex;
+    gap: 2rem;
+
+    &__link {
+        color: v.$color-white;
+        font-size: 1.2rem;
+        text-decoration: none;
+        
+        &.active {
+            position: relative;
+
+            color: v.$color-red;
+        }
+
+        &.active::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -0.25rem;
+
+            height: 0.15rem;
+            width: 100%;
+
+            background-color: v.$color-red;
+        }
+    }
+}
