@@ -1,1 +1,1 @@
-export const RATE_PRECISION = 2;
+export const RATE_PRECISION = 6;
