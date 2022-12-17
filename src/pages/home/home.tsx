@@ -1,5 +1,6 @@
 import React from 'react';
 import { useRecoilValue } from 'recoil';
+import { homeStrings } from '../../utils/strings';
 import {
     currentCurrency,
     currunciesToCompare,
@@ -13,9 +14,9 @@ const Home: React.FC = (): JSX.Element => {
 
     return (
         <>
-            <h3>Currency:</h3>
+            <h3>{homeStrings.currency}</h3>
             <p>{currency.displayName}</p>
-            <h3>Currencies to compare:</h3>
+            <h3>{homeStrings.currenciesToCompare}</h3>
             {compareCurrencies.map((currency) => (
                 <div key={currency.value}>
                     <p>{currency.displayName}</p>
