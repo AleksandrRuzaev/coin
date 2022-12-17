@@ -12,7 +12,7 @@ const Home: React.FC = (): JSX.Element => {
     const currenciesRates = useRecoilValue(rates);
 
     return (
-        <React.Suspense fallback={<div>Loading</div>}>
+        <>
             <h3>Currency:</h3>
             <p>{currency.displayName}</p>
             <h3>Currencies to compare:</h3>
@@ -22,7 +22,7 @@ const Home: React.FC = (): JSX.Element => {
                     <p>{currenciesRates[currency.value]}</p>
                 </div>
             ))}
-        </React.Suspense>
+        </>
     );
 };
 
