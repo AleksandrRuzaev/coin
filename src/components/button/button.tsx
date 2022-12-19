@@ -3,7 +3,7 @@ type ButtonProps = {
     onClick?: () => void;
     label?: string;
     buttonType?: ButtonType;
-    icon: unknown;
+    icon?: unknown;
 };
 
 const Button: React.FC<ButtonProps> = ({
