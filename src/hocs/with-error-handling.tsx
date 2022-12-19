@@ -1,15 +1,12 @@
-import React, { useCallback, useState } from 'react';
+import React, {  } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
-import { ErrorFallback, Popup } from '../components';
-import { PopupType } from '../enums';
+import { ErrorFallback } from '../components';
 import { getDisplayedName } from '../utils/helpers/get-displayed-name.function';
 
 const withErrorHandler = <P extends object>(
     WrappedComponent: React.ComponentType<P>,
 ): ((props: P) => JSX.Element) => {
     const ComponentWithErrorHandling = (props: P): JSX.Element => {
-        const [open, setOpen] = useState(false);
-
         const handleError = (error: Error) => {
             try {
                 // setIsPopupShown(true);
@@ -18,22 +15,11 @@ const withErrorHandler = <P extends object>(
             }
         };
 
-        const handleClose = useCallback(() => {
-            setOpen(false);
-        }, []);
-
         return (
             <ErrorBoundary
                 FallbackComponent={ErrorFallback}
                 onError={handleError}
             >
-                <Popup
-                    isOpened={open}
-                    type={PopupType.Success}
-                    onClose={handleClose}
-                >
-                    "Errror"
-                </Popup>
                 <WrappedComponent {...props} />
             </ErrorBoundary>
         );
