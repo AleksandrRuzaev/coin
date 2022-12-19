@@ -1,0 +1,33 @@
+@use '../../variables' as v;
+
+.popup {
+    position: fixed;
+    top: 5rem;
+    right: 2rem;
+
+    min-width: 10rem;
+    padding: 0.5rem;
+    
+    color: v.$color-white;
+
+    border-radius: 0.5rem;
+
+    &[data-type="info"] {
+        background-color: v.$color-light-blue;
+    }
+
+    &[data-type="error"] {
+        background-color: v.$color-red;
+    }
+
+    &[data-type="warning"] {
+        color: v.$color-black;
+        background-color: v.$color-orange;
+    }
+
+    &[data-type="success"] {
+        color: v.$color-black;
+        background-color: v.$color-green;
+    }
+}
+
