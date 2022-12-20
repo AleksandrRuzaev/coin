@@ -40,7 +40,7 @@ const Popup: React.FC<PropsWithChildren<PopupProps>> = ({
         <>
             {isOpened && (
                 <div className="popup" data-type={type}>
-                    <Button icon={'close'} onClick={handleClose} />
+                    <Button onClick={handleClose} />
                     <div>{children}</div>
                 </div>
             )}

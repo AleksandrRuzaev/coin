@@ -10,10 +10,9 @@ const ErrorFallback: React.FC<FallbackProps> = ({
         <div role="alert">
             <p>{errorFallbackStrings.title}</p>
             <pre>{error.message}</pre>
-            <Button
-                onClick={resetErrorBoundary}
-                label={errorFallbackStrings.buttonLabel}
-            />
+            <Button onClick={resetErrorBoundary}>
+                {errorFallbackStrings.buttonLabel}
+            </Button>
         </div>
     );
 };

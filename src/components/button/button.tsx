@@ -1,16 +1,15 @@
+import { PropsWithChildren } from 'react';
+
 type ButtonType = 'button' | 'submit';
 type ButtonProps = {
     onClick?: () => void;
-    label?: string;
     buttonType?: ButtonType;
-    icon?: unknown;
 };
 
-const Button: React.FC<ButtonProps> = ({
+const Button: React.FC<PropsWithChildren<ButtonProps>> = ({
     onClick,
-    label,
+    children,
     buttonType = 'button',
-    icon,
 }): JSX.Element => {
     const handleClick = (): void => {
         onClick && onClick();
@@ -18,10 +17,7 @@ const Button: React.FC<ButtonProps> = ({
 
     return (
         <button onClick={handleClick} type={buttonType}>
-            <>
-                {label && <label>{label}</label>}
-                {icon && <div>{icon as any}</div>}
-            </>
+            {children}
         </button>
     );
 };
