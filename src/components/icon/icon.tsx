@@ -1,6 +1,6 @@
 import React from 'react';
-import Bank from '../../assets/icons/bank.svg';
-import Wallet from '../../assets/icons/wallet.svg';
+import { ReactComponent as Bank } from '../../assets/icons/bank.svg';
+import { ReactComponent as Wallet } from '../../assets/icons/wallet.svg';
 import classNames from 'classnames';
 import './icon.scss';
 import { IconType } from './icon.types';
