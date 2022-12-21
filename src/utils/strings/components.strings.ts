@@ -3,4 +3,8 @@ const errorFallbackStrings = {
     buttonLabel: 'Try again',
 };
 
-export { errorFallbackStrings };
+const financialSourcesStrings = {
+    title: 'Financial sources',
+};
+
+export { errorFallbackStrings, financialSourcesStrings };
