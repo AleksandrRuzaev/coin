@@ -1,5 +1,6 @@
 import React from 'react';
 import { useRecoilValue } from 'recoil';
+import { SourceList } from '../../components';
 import { homeStrings } from '../../utils/strings';
 import {
     currentCurrency,
@@ -23,6 +24,7 @@ const Home: React.FC = (): JSX.Element => {
                     <p>{currenciesRates[currency.value]}</p>
                 </div>
             ))}
+            <SourceList />
         </>
     );
 };

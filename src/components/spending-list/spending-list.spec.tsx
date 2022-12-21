@@ -5,7 +5,7 @@ import { categories } from '../../pages/home/home.store';
 import { IconType } from '../icon/icon.types';
 import { SpendingList } from './spending-list';
 
-describe('FinancialSources', () => {
+describe('SpendingList', () => {
     const mockCategories = [
         {
             id: 4,
