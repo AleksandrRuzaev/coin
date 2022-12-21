@@ -1,12 +1,13 @@
 import React from 'react';
 import { useRecoilValue } from 'recoil';
-import { SourceList } from '../../components';
 import { homeStrings } from '../../utils/strings';
 import {
     currentCurrency,
     currunciesToCompare,
 } from '../settings/settings.store';
 import { rates } from './home.store';
+import { SourceList } from './source-list/source-list';
+import { SpendingList } from './spending-list/spending-list';
 
 const Home: React.FC = (): JSX.Element => {
     const compareCurrencies = useRecoilValue(currunciesToCompare);
@@ -25,6 +26,7 @@ const Home: React.FC = (): JSX.Element => {
                 </div>
             ))}
             <SourceList />
+            <SpendingList />
         </>
     );
 };

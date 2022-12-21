@@ -1,11 +1,11 @@
 import { render, screen } from '@testing-library/react';
 import { RecoilRoot } from 'recoil';
-import { CategoryType } from '../../enums';
-import { categories } from '../../pages/home/home.store';
-import { IconType } from '../icon/icon.types';
-import { SpendingList } from './spending-list';
+import { CategoryType } from '../../../enums';
+import { categories } from '../home.store';
+import { IconType } from '../../../components/icon/icon.types';
+import { SourceList } from './source-list';
 
-describe('SpendingList', () => {
+describe('SourceList', () => {
     const mockCategories = [
         {
             id: 4,
@@ -23,17 +23,17 @@ describe('SpendingList', () => {
         },
     ];
 
-    it('should render spendings', () => {
+    it('should render sources', () => {
         render(
             <RecoilRoot
                 initializeState={({ set }) => {
                     set(categories, mockCategories);
                 }}
             >
-                <SpendingList />
+                <SourceList />
             </RecoilRoot>,
         );
 
-        expect(screen.getByText('Food')).not.toBeNull();
+        expect(screen.getByText('Wallet')).not.toBeNull();
     });
 });
