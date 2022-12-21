@@ -1,0 +1,12 @@
+.category-list {
+    &__title {
+        font-size: 1.5rem;
+    }
+
+    &__list {
+        display: flex;
+        gap: 2rem;
+
+        padding: 2rem;
+    }
+}
