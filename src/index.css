@@ -4,3 +4,8 @@
 
   box-sizing: border-box;
 }
+
+button {
+  background-color: unset;
+  border: 0;
+}
