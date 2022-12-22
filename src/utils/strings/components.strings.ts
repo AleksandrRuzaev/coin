@@ -7,4 +7,8 @@ const financialSourcesStrings = {
     title: 'Financial sources',
 };
 
-export { errorFallbackStrings, financialSourcesStrings };
+const spendingsStrings = {
+    title: 'Spendings',
+};
+
+export { errorFallbackStrings, financialSourcesStrings, spendingsStrings };
